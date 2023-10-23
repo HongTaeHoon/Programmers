@@ -1,9 +1,4 @@
 function solution(n) {
-// if(n === 3628800){ 
-//     return 10
-// }else if (n <= 362880 || n> 40320){
-//     return 9
-// }
 if( n ===1 ){
     return 1
 }else if (n<6){
