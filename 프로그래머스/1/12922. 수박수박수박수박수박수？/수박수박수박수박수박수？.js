@@ -1,8 +1,11 @@
 function solution(n) {
-    answer = []
-    while( n !== 0){
-        answer.push('수')
-        n = n-1
+    answer = ''
+    for(i = 1; i<=n; i++){
+        if(i % 2 ){
+            answer+='수'
+        }else {
+            answer+='박'
+        }
     }
-return answer.map((v,idx)=>{if(idx%2!==0){return '박'}else return v}).join('')
+    return answer
 }
