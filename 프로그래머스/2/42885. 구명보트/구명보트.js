@@ -1,13 +1,14 @@
 function solution(people, limit) {
-let sortedPeople = people.sort((a,b)=>b-a)
-
-let answer = 0;
-
-for(i=0, j=people.length-1; i<=j; i++){
-    if(sortedPeople[i]+sortedPeople[j] <= limit){
-        j--
+    let sortedPeople = people.sort((a, b) => a - b);
+    let count = 0;
+    while(people.length) {
+        if(people[0] + people[people.length - 1] <= limit) {
+            people.shift();
+            people.pop();
+        }else {
+            people.pop();
+        }
+        count++;
     }
-      answer++
-}
-return answer
+    return count
 }
