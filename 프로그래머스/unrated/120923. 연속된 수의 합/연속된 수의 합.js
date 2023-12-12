@@ -1,4 +1,5 @@
 function solution(num, total) {
+// if(num ===1) return [total]
         const getFirstValue = (num,total)=>{
         if(num % 2 === 0){
             return Math.ceil(total / num) - (num / 2)
